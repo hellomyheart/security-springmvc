@@ -52,4 +52,18 @@ public class LoginController {
         return fullname+"访问资源r1";
     }
 
+    @GetMapping(value = "/r/r2",produces = {"text/plain;charset=utf-8"})
+    public String r2(HttpSession httpSession){
+        String fullname=null;
+
+        Object object = httpSession.getAttribute(UserDto.SESSION_USER_KEY);
+        if (object == null){
+            fullname =null;
+        }else {
+            UserDto userDto =(UserDto) object;
+            fullname = userDto.getFullname();
+        }
+        return fullname+"访问资源r2";
+    }
+
 }

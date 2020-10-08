@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 /**
  * @description 用户身份信息DTO
  * @className: UserDto
@@ -25,4 +27,8 @@ public class UserDto {
     private String password;
     private String fullname;
     private String mobile;
+    /**
+     * 用户权限
+     */
+    private Set<String> authorities;
 }
