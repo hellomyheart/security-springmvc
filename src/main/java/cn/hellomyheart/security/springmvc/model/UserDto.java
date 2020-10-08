@@ -15,6 +15,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserDto {
+
+    public static final String SESSION_USER_KEY = "_user";
     /**
      * 用户身份信息
      */
